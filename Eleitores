@@ -1,0 +1,100 @@
+candidatos = {
+    1: { 
+        'nome': 'cuca pereira',
+        'partido': 'Partido espanca',
+        'nome_do_vice': 'cuca ceboso',
+        'cargos_ocupados': ['Deputada Estadual', 'Secretária de Educação'],
+        'idade': 45
+    },
+    2: {
+        'nome': 'paulo perninha',
+        'partido': 'Partido perna curta',
+        'nome_do_vice': 'elias cuba',
+        'cargos_ocupados': ['Vereador', 'Secretário de Saúde'],
+        'idade': 50
+    },
+    3: {
+        'nome': 'carlinhos rei delas',
+        'partido': 'Partido anão',
+        'nome_do_vice': 'anão quebrado',
+        'cargos_ocupados': ['Deputado Federal', 'Ministro do Meio Ambiente'],
+        'idade': 42
+    },
+    4: {
+        'nome': 'Diego da foda',
+        'partido': 'Partido dos mendigo',
+        'nome_do_vice': 'macho vei',
+        'cargos_ocupados': ['Senador', 'Prefeito'],
+        'idade': 56
+    },
+    5: {
+        'nome': 'thais carla',
+        'partido': 'Partido gordura',
+        'nome_do_vice': 'Marcos Rocha',
+        'cargos_ocupados': ['Deputada Federal', 'Vice-Presidente'],
+        'idade': 48
+    },
+    6: {
+        'nome': 'Fernando Lima',
+        'partido': 'Partido Progressista',
+        'nome_do_vice': 'Joana Pereira',
+        'cargos_ocupados': ['Vereador', 'Secretário de Obras'],
+        'idade': 53
+    },
+    7: {
+        'nome': 'elisa Sanches ',
+        'partido': 'Partido da duro',
+        'nome_do_vice': 'kid',
+        'cargos_ocupados': ['Deputada Estadual', 'Governadora'],
+        'idade': 40
+    },
+    8: {
+        'nome': 'Henrique Torres',
+        'partido': 'Partido Liberal',
+        'nome_do_vice': 'Simone Lima',
+        'cargos_ocupados': ['Ministro da Fazenda', 'Deputado Federal'],
+        'idade': 55
+    },
+    9: {
+        'nome': 'Isabela Freitas',
+        'partido': 'Partido da Família',
+        'nome_do_vice': 'Jorge Silva',
+        'cargos_ocupados': ['Vereadora', 'Secretária de Assistência Social'],
+        'idade': 44
+    },
+    10: {
+        'nome': 'João Batista',
+        'partido': 'Partido Popular',
+        'nome_do_vice': 'Sandra Almeida',
+        'cargos_ocupados': ['Prefeito', 'Deputado Estadual'],
+        'idade': 60
+    }
+}
+
+
+def mostrar_informacoes(numero):
+    if numero in candidatos:
+        info = candidatos[numero]
+        print(f"Nome: {info['nome']}")
+        print(f"Partido: {info['partido']}")
+        print(f"Nome do Vice: {info['nome_do_vice']}")
+        print(f"Cargos Já Ocupados: {', '.join(info['cargos_ocupados'])}")
+        print(f"Idade: {info['idade']}")
+    else:
+        print("Número de candidato inválido.")
+
+
+def main():
+    while True:
+        try:
+            numero = int(input("Digite o número do candidato (ou 0 para sair): "))
+            if numero == 0:
+                print("Saindo...")
+                break
+            mostrar_informacoes(numero)
+        except ValueError:
+            print("Por favor, insira um número válido.")
+
+if __name__ == "__main__":
+    main()
+    
